@@ -1,0 +1,1 @@
+class t{constructor(s=0){if(this.cache={},t.instance)return t.instance;this.ttlSeconds=s,t.instance=this}get(t){const s=this.cache[t];return s&&(!s.expirationTime||s.expirationTime>Date.now())?s.value:null}set(t,s,e=this.ttlSeconds){const i=e>0?Date.now()+1e3*e:null;this.cache[t]={value:s,expirationTime:i}}}export{t as C}
